@@ -3,7 +3,7 @@
     --color-font: #000;
     --color-header: #638F89;
     --color-background-main: #aaa;
-    --color-main: #fff;
+    --color-main: #7E919E;
 }
 body {
     display: flex;
@@ -16,6 +16,10 @@ body {
     background-color: var(--color-background-main);
 }
 header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -47,6 +51,9 @@ header div img {
     height: 80px;
 }
 .buttons nav ul li {
+    padding-block: 20px;
+}
+.navitems a, .navitems-l a, .navitems-r a {
     padding: 20px;
 }
 #userimg {
@@ -66,7 +73,7 @@ header div img {
 .navitems-r {
     border-right: 1px solid rgba(0, 0, 0, 0.5);
 }
-.navitems:hover, .navitems-l:hover, .navitems-r:hover {
+.navitems a:hover, .navitems-l a:hover, .navitems-r a:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 #loglogo {
@@ -76,15 +83,23 @@ header div img {
 /* Header end */
 
 main {
+    position: absolute;
+    top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 100%;
+    height: 95vh;
     background-color: var(--color-main);
 }
-main section {
+.leftymain img {
+    padding-top: 10px;
+    width: 128px;
+    padding: 0;
+}
+main div section, main div img {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,10 +110,6 @@ main hr {
 }
 .minHR {
     width: 25%;
-}
-.promoimg, .promoimg img {
-    width: 100%;
-    height: auto;
 }
 a:visited, a {
     text-decoration: none;
@@ -116,9 +127,6 @@ a:hover {
 .formlink h4 a {
     border: 1px dotted rgba(0, 0, 0, 0.7);
     padding: 2px;
-}
-.teachers {
-    display: flex;
     align-items: center;
     text-align: center;
 }
@@ -127,5 +135,10 @@ a:hover {
 }
 .WWD {
     display: flex;
+    text-align: center;
+}
+.teachers {
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
